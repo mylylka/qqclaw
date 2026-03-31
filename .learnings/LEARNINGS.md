@@ -1,7 +1,7 @@
-# Learnings
+# 学习记录
 
-Corrections, insights, and knowledge gaps captured during development.
+会话中捕获的纠正、洞见和知识盲区。
 
-**Categories**: correction | insight | knowledge_gap | best_practice
+**分类**: 纠正 | 洞见 | 知识盲区 | 最佳实践
 
 ---

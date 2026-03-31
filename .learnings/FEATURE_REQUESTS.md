@@ -1,5 +1,5 @@
-# Feature Requests
+# 功能需求
 
-Capabilities requested by the user.
+用户请求的新能力。
 
 ---
