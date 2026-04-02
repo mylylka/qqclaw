@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Skill store artifacts
+skills/.skills_store_lock.json
+
+# Config with secrets (mcporter tokens, API keys)
+config/mcporter.json
+
+# Skill installed packages (manage via skillhub, not git)
+skills/felo-slides/
+
+# OS files
+.DS_Store
