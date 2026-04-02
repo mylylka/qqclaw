@@ -38,6 +38,7 @@ You wake up fresh each session. These files are your continuity:
 - **Daily summary:** `memory/summaries/YYYY-MM-DD-summary.md` — compressed daily notes (read by default)
 - **Daily notes:** `memory/YYYY-MM-DD.md` — full logs (read only when user asks for history)
 - **Long-term:** `MEMORY.md` — your curated memories, like a human's long-term memory
+- **Self-improving:** `~/self-improving/` (via `self-improving` skill) — execution-improvement memory (preferences, workflows, style patterns, what improved/worsened outcomes)
 
 ### 📖 What to Read
 
@@ -49,13 +50,41 @@ You wake up fresh each session. These files are your continuity:
 
 Capture what matters. Decisions, context, things to remember. Skip the secrets unless asked to keep them.
 
-### 📝 Write It Down - No "Mental Notes"!
+Use `memory/YYYY-MM-DD.md` and `MEMORY.md` for factual continuity (events, context, decisions).
+Use `~/self-improving/` for compounding execution quality across tasks.
+For compounding quality, read `~/self-improving/memory.md` before non-trivial work, then load only the smallest relevant domain or project files.
+If in doubt, store factual history in `memory/YYYY-MM-DD.md` / `MEMORY.md`, and store reusable performance lessons in `~/self-improving/` (tentative until human validation).
 
-- **Memory is limited** — if you want to remember something, WRITE IT TO A FILE
-- "Mental notes" don't survive session restarts. Files do.
-- When someone says "remember this" → update `memory/YYYY-MM-DD.md` or relevant file
-- When you learn a lesson → update this file or the relevant skill
-- **Text > Brain** 📝
+### 📝 Write It Down - Proactive Logging
+
+**被动触发（用户要求时）：**
+- 用户说"记下来"、"记住这个" → 如果是事实/事件，更新 `memory/YYYY-MM-DD.md`；如果是纠错/偏好/工作流，记录到 `~/self-improving/`
+- 用户说"以后这个要记得" → 同上
+
+**主动触发（任务完成时立即写，不等会话结束）：**
+完成以下任何一项后，立即更新 `memory/YYYY-MM-DD.md`：
+- 安装/配置了任何 skill 或工具
+- 做了关键决策（改了配置、改了规则文件）
+- 发现用户新偏好或需求
+- 遇到问题及解决方案（值得以后参考）
+- 生成了文件/内容（记录文件名和位置）
+
+**主动触发（会话结束时）：**
+- 长时间会话结束前，更新今日日志摘要
+
+**格式模板：**
+```markdown
+### HH:MM - 任务/事件标题
+- 动作1
+- 结果/决策
+```
+
+**不写的例外：**
+- 纯闲聊、无实质内容的对话
+- 简单确认/回答
+- 系统心跳检查
+
+**Text > Brain** 📝 写下来才是真的记住了。
 
 ---
 
