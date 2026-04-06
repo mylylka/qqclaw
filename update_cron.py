@@ -1,0 +1,73 @@
+#!/usr/bin/env python3
+import subprocess
+import sys
+
+message = """直接输出以下提醒内容，禁止调用message工具：严格按照以下步骤执行，不允许中途停止！
+
+【核心总准则】全文本必须符合初中中学生阅读理解水平，全程用深入浅出的科普向表达，像同班同学聊天分享一样自然真诚，严禁任何晦涩难懂的学术黑话、专业套话、超长难句，所有用到的思维方法、概念都必须先用中学生能懂的日常/课本场景类比解释，确保中学生能轻松读懂、有共鸣，绝对不能出现成人都看不懂的内容！
+
+【第一步】调用news-aggregator-skill搜索昨日真实热点新闻，确保所有新闻均为客观真实发生的事件，无虚假编造内容，优先选和青少年生活、成长、认知相关的事件
+
+【第二步】每条新闻必须按顺序完整输出以下4个模块，整体口吻统一为活泼真诚、有思考感的中学生校园博客风格，面向青少年群体，严谨科学不浮夸：
+
+1. 新闻主体描述：200-300字，像给同班同学讲新鲜事一样，完整还原新闻核心事实，不用官方套话，逻辑清晰，客观中立，没有看不懂的行业术语
+
+2. 核心讨论角度：精准提炼1个中学生也能有话说、直击新闻核心的讨论角度，一句话说清，不模糊、不偏门，不搞超纲的专业话题
+
+3. 中学生视角轻量深度思辨：非对话形式，以同龄博主的第一人称口吻展开，拒绝空喊口号、网络套话。要求：① 必须至少用1种好懂的思辨思维模型（包括但不限于第一性原理、逆向思维、批判性思维、机会成本思维等），用之前必须先给1句通俗类比解释；② 至少2个贴合中学生生活的辩证角度；③ 直指核心，短句为主，150-200字，好读好懂
+
+4. 延伸彩蛋：新闻相关的八卦/趣闻/轻量思考小问题，简短一行，不超过30字，贴合青少年兴趣
+
+【第三步】读取knowledge/小麦学习/课程表.md获取今日课程，同步识别当日是否为法定假日，若为法定假日需明确标注「今日法定假日，放假休息」
+
+【第四步】全部内容完成后，按以下固定结构一次性完整输出，禁止拆分输出、禁止中途输出：
+
+• 国际热点 2条（每条均完整包含第二步要求的全部4个模块）
+
+• 科技 2条（每条均完整包含第二步要求的全部4个模块）
+
+• 财经 2条（每条均完整包含第二步要求的全部4个模块）
+
+• 社会热点 2条（每条均完整包含第二步要求的全部4个模块）
+
+• 文娱影视 1条（完整包含第二步要求的全部4个模块）
+
+• 微博热搜 1条（完整包含第二步要求的全部4个模块）
+
+• 今日课程表
+
+• @大哈提醒
+
+⚠️ 必须完成以上所有步骤、所有模块的内容输出后再结束！严禁遗漏任何环节、任何分类条目，严禁编造虚假信息，严禁出现超纲晦涩内容，严禁未完成全流程就终止输出！"""
+
+cmd = [
+    "ELECTRON_RUN_AS_NODE=1",
+    "NODE_OPTIONS=--no-warnings",
+    "OPENCLAW_NIX_MODE=1",
+    "/Applications/QClaw.app/Contents/Frameworks/QClaw Helper.app/Contents/MacOS/QClaw Helper",
+    "/Users/liujing/Library/Application Support/QClaw/openclaw/node_modules/openclaw/openclaw.mjs",
+    "cron", "edit", "a0db4087-6fc2-4d81-8481-845fa7b4609c",
+    "--message", message
+]
+
+# Run the command
+env = {
+    "ELECTRON_RUN_AS_NODE": "1",
+    "NODE_OPTIONS": "--no-warnings",
+    "OPENCLAW_NIX_MODE": "1"
+}
+
+import os
+env.update(os.environ)
+
+result = subprocess.run(
+    cmd[3:],  # Skip the env vars which are passed via env dict
+    env=env,
+    capture_output=True,
+    text=True
+)
+
+print(result.stdout)
+if result.stderr:
+    print(result.stderr, file=sys.stderr)
+sys.exit(result.returncode)
