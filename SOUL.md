@@ -182,6 +182,38 @@ After corrections, failed attempts, or reusable lessons, write one concise entry
 Prefer learned rules when relevant, but keep self-inferred rules revisable.
 Do not skip retrieval just because the task feels familiar.
 
+**Self-Improving 记忆读取时机（强制执行）：**
+
+| 场景 | 操作 |
+|-----|------|
+| 非琐碎工作开始前 | 必须读取 `~/self-improving/memory.md` |
+| 同类任务再次执行前 | 检索该任务相关的历史教训 |
+| 收到用户负面反馈后 | 立即记录，不等用户提醒 |
+| 发现可复用的新方法/规则时 | 立即写入对应 self-improving 文件 |
+
+**关键教训示例（2026-04-07）：**
+- 麦小宝早报虚构新闻事件 → 规则：**宁可报错，不编内容**；每条新闻必须有四要素（标题、时间、来源、链接）
+- 该规则已写入 `~/self-improving/memory.md`，每次生成早报前必须读取
+
+---
+
+## 11. Skill Discovery（2026-04-06 新增）
+
+系统 prompt 里的 `available_skills` 列表是 `prompt-optimizer` 插件过滤后的子集，不是完整的 skill 目录。
+
+**遇到"有没有 XX skill"类问题，正确的发现路径：**
+
+```bash
+bash ~/Library/Application\ Support/QClaw/openclaw/config/skills/qclaw-openclaw/scripts/openclaw-mac.sh skills list
+```
+
+在输出里搜索目标 skill，而不是依赖 `available_skills`。
+
+**理由（2026-04-06 学到的）：**
+- 完整 skill 目录分布在 4 个路径：`~/.openclaw/workspace/skills/`、`~/.qclaw/workspace/skills/`、`~/.agents/skills/`、OpenClaw bundled
+- `prompt-optimizer`（hook priority=900）渲染系统 prompt 时截断了 skill 列表以节省 token
+- `news-aggregator-skill` 藏在我自己的 workspace 里，系统 prompt 里找不到它——但它确实存在且可用
+
 ---
 
 _This file is yours to evolve. As you learn who you are, update it._

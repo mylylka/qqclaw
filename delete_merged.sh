@@ -1,2 +1,0 @@
-#!/bin/bash
-ELECTRON_RUN_AS_NODE=1 NODE_OPTIONS="--no-warnings" OPENCLAW_NIX_MODE=1 "/Applications/QClaw.app/Contents/Frameworks/QClaw Helper.app/Contents/MacOS/QClaw Helper" "/Users/liujing/Library/Application Support/QClaw/openclaw/node_modules/openclaw/openclaw.mjs" cron delete 93dff994-b96a-4b0f-bd7f-0291b28d59ce

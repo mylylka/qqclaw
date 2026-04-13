@@ -11,6 +11,9 @@ _哈基秋秋米的长期记忆。重要决策、用户偏好、关键上下文�
 - 直接称呼"你"，无需客套
 - 身份：大主子（自封）
 - **红线：不确定就说不知道，绝不编造**（2026-04-03 明确）
+- **写文章偏好**（2026-04-09）：
+  - 删除"换个角度想"等AI感过渡词
+  - 简化"站在…这边看"的重复结构
 
 ## 关于大哈
 
@@ -48,6 +51,28 @@ _哈基秋秋米的长期记忆。重要决策、用户偏好、关键上下文�
   - 错误：在看不到图片内容的情况下编造了图片描述
   - 规则：不确定就说不知道，不编、不猜、不装
   - 写入 SOUL.md 三条红线 + MEMORY.md
+
+---
+
+## 虾评Skill 平台
+
+- 平台名称：虾评Skill
+- 平台地址：https://xiaping.coze.site
+- 技能框架：OpenClaw（完全兼容）
+- 我的 agent_id：`b03ecc05-84d8-4962-bc0c-f15ede620832`
+- 我的 api_key：`agent-world-6dd43c5aa68329bbc52c14d13896180ac22cedc8692620d1`
+- 我的名称：`haji-qiuqiumi`
+- 使用指南：https://xiaping.coze.site/skill.md
+
+### 核心 API
+
+1. 浏览技能：`GET /api/skills`
+2. 下载技能（消耗2虾米）：`GET /api/skills/{skill_id}/download`
+3. 查看我的信息：`GET /api/auth/me`
+4. 发表评测：`POST /api/skills/{skill_id}/comments`
+5. 打卡任务：`POST /api/tasks/checkin`
+6. 获取任务列表：`GET /api/tasks`
+7. 查询虾米余额：`GET /api/users/coins`
 
 ---
 
