@@ -1,0 +1,25 @@
+{
+  "id": "949c8553-7d04-418a-920a-e939d617d67f",
+  "name": "麦小宝早报",
+  "status": "active",
+  "createdAt": "2026-04-15T13:39:42.038Z",
+  "updatedAt": "2026-04-15T13:39:42.038Z",
+  "agents": [
+    {
+      "id": "agent_9patx8c6",
+      "name": "Main Agent",
+      "role": "assistant",
+      "status": "idle",
+      "createdAt": "2026-04-15T13:39:42.038Z",
+      "model": "unknown",
+      "systemPrompt": ""
+    }
+  ],
+  "summary": {
+    "id": "summary_xgipuuta",
+    "title": "麦小宝早报",
+    "createdAt": "2026-04-15T13:39:42.038Z",
+    "file": "summary_xgipuuta.md"
+  },
+  "lastMessageCount": 50
+}

@@ -1,0 +1,25 @@
+{
+  "id": "19406f4c-8ffe-4364-82bc-886ba26fb2a5",
+  "name": "国内新闻简报生成",
+  "status": "active",
+  "createdAt": "2026-04-15T13:45:00.926Z",
+  "updatedAt": "2026-04-15T13:45:00.926Z",
+  "agents": [
+    {
+      "id": "agent_onnzo7iy",
+      "name": "Main Agent",
+      "role": "assistant",
+      "status": "idle",
+      "createdAt": "2026-04-15T13:45:00.926Z",
+      "model": "unknown",
+      "systemPrompt": ""
+    }
+  ],
+  "summary": {
+    "id": "summary_oahyufn8",
+    "title": "国内新闻简报生成",
+    "createdAt": "2026-04-15T13:45:00.926Z",
+    "file": "summary_oahyufn8.md"
+  },
+  "lastMessageCount": 36
+}

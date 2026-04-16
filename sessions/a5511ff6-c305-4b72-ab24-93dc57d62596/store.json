@@ -1,0 +1,25 @@
+{
+  "id": "a5511ff6-c305-4b72-ab24-93dc57d62596",
+  "name": "心跳维护检查",
+  "status": "active",
+  "createdAt": "2026-04-15T16:01:09.031Z",
+  "updatedAt": "2026-04-15T22:00:49.574Z",
+  "agents": [
+    {
+      "id": "agent_dlmr72ch",
+      "name": "Main Agent",
+      "role": "assistant",
+      "status": "idle",
+      "createdAt": "2026-04-15T16:01:09.031Z",
+      "model": "unknown",
+      "systemPrompt": ""
+    }
+  ],
+  "summary": {
+    "id": "summary_kev0ov9n",
+    "title": "心跳维护检查",
+    "createdAt": "2026-04-15T16:01:09.031Z",
+    "file": "summary_kev0ov9n.md"
+  },
+  "lastMessageCount": 13
+}

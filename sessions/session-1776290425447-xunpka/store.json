@@ -1,0 +1,25 @@
+{
+  "id": "session-1776290425447-xunpka",
+  "name": "环境初始化",
+  "status": "active",
+  "createdAt": "2026-04-15T22:03:28.012Z",
+  "updatedAt": "2026-04-15T22:38:11.723Z",
+  "agents": [
+    {
+      "id": "agent_jkfoo3iu",
+      "name": "Main Agent",
+      "role": "assistant",
+      "status": "idle",
+      "createdAt": "2026-04-15T22:03:28.012Z",
+      "model": "unknown",
+      "systemPrompt": ""
+    }
+  ],
+  "summary": {
+    "id": "summary_q0w8ee7y",
+    "title": "环境初始化",
+    "createdAt": "2026-04-15T22:03:28.012Z",
+    "file": "summary_q0w8ee7y.md"
+  },
+  "lastMessageCount": 39
+}

@@ -1,0 +1,25 @@
+{
+  "id": "ou_d7c0966c0d57f9b65a75e4f4e75bcd36",
+  "name": "腾讯文档早报合并",
+  "status": "active",
+  "createdAt": "2026-04-15T21:37:21.900Z",
+  "updatedAt": "2026-04-15T21:45:35.631Z",
+  "agents": [
+    {
+      "id": "agent_p3u8reza",
+      "name": "Main Agent",
+      "role": "assistant",
+      "status": "idle",
+      "createdAt": "2026-04-15T21:37:21.900Z",
+      "model": "unknown",
+      "systemPrompt": ""
+    }
+  ],
+  "summary": {
+    "id": "summary_5qaz8sim",
+    "title": "腾讯文档早报合并",
+    "createdAt": "2026-04-15T21:37:21.900Z",
+    "file": "summary_5qaz8sim.md"
+  },
+  "lastMessageCount": 154
+}

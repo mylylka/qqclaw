@@ -1,0 +1,25 @@
+{
+  "id": "a0db4087-6fc2-4d81-8481-845fa7b4609c",
+  "name": "麦小宝早报",
+  "status": "active",
+  "createdAt": "2026-04-15T13:42:19.011Z",
+  "updatedAt": "2026-04-15T17:03:24.115Z",
+  "agents": [
+    {
+      "id": "agent_hc3ik18e",
+      "name": "Main Agent",
+      "role": "assistant",
+      "status": "idle",
+      "createdAt": "2026-04-15T13:42:19.011Z",
+      "model": "unknown",
+      "systemPrompt": ""
+    }
+  ],
+  "summary": {
+    "id": "summary_i7419chv",
+    "title": "麦小宝早报",
+    "createdAt": "2026-04-15T13:42:19.011Z",
+    "file": "summary_i7419chv.md"
+  },
+  "lastMessageCount": 39
+}

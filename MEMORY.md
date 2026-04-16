@@ -35,10 +35,37 @@ _哈基秋秋米的长期记忆。重要决策、用户偏好、关键上下文�
 - 记忆结构：双层（daily summary + full log）
 - 每日 23:55 自动压缩任务已设置
 - workspace 路径：`/Users/liujing/.qclaw/workspace`
+- **qmd 索引规则（2026-04-13 血泪教训）：**
+  - qmd 不会自动检测新文件！每次往 knowledge 加文件后必须跑 `npx @tobilu/qmd update && npx @tobilu/qmd embed`
+  - qmd 只索引 `*.md`，PDF 不收录，需转成 md 才能搜索
+  - 命令在 workspace 目录下执行
+
+## 腾讯文档（tencent-docs）连接方式
+
+**状态：✅ 已连接**
+
+- 连接方式：OpenClaw 内部 credential 管理（credentialHostedSkills → `tencent_docs`）
+- **不要走 setup.sh 引导流程**：那是给"从未配置过"的用户设计的
+- **正确做法**：用户说"已经有连接"时，**直接调 API**，不验证、不授权、不看 AUTH_REQUIRED
+- MCP 工具入口：`~/.local/node_modules/.bin/mcporter call tencent-docs <工具名>`
+- 常用工具：`create_smartcanvas_by_mdx`（参数：`title` + `mdx`）
+- 成功后返回 `file_id` 和 `url`
+
+**教训（2026-04-15）**：刘婧提醒后意识到，当用户确认已连接时，不应再去跑 setup.sh 验证，而是直接尝试调用 API。
 
 ## Skill 命名规则
 
 - 所有新建 skill 必须以 `jingjing-` 开头（2026-04-04 确认）
+
+## jingjing-writer（公众号长文写作 Skill）
+
+- 路径：`~/.qclaw/workspace/skills/jingjing-writer/`
+- 对标：卡兹克（khazix）公众号风格
+- 完整复刻来源：`/Users/liujing/Documents/GITCODE/khazix-skills-main/khazix-writer/old.md`
+- 核心文件：
+  - `SKILL.md` — 完整 skill（8.8KB），含四层自检体系
+  - `references/content_methodology.md` — 内容方法论完整版（5.3KB）
+  - `references/style_examples.md` — 风格示例库（15.4KB）
 
 ## 关键决策
 
@@ -77,3 +104,20 @@ _哈基秋秋米的长期记忆。重要决策、用户偏好、关键上下文�
 ---
 
 _按需更新。重要的事才写进来。_
+
+## 用户身份与偏好
+
+- {"section"："用户身份与偏好", "fact": "运营中学生科普博客，风格娓娓道来，每条控制在150字以内，中学生讲给同学听的语气，避免太难的专业名词但不要太口语化"},
+- {"section"："用户身份与偏好", "fact": "早报人设「麦小宝」，面向中学生群体，风格活泼真诚、科普向、深入浅出"},
+- {"section"："用户身份与偏好", "fact": "飞书用户ID：ou_d7c0966c0d57f9b65a75e4f4e75bcd36（大主子刘婧），同时是ou_6f8cf16048229769c2eca461db8c0f37（大哈）的头像设定负责人"},
+- {"section"："经验与决策", "fact": "提醒类任务需要提前5分钟触发，留出缓冲时间（公式：提醒时间 = 用户指定时间 - 5分钟）"},
+- {"section"："经验与决策", "fact": "微信识图问题根因：wechat-access 插件只处理文本消息，图片/媒体类型未实现，这是插件代码限制"},
+- {"section"："技术规范偏好", "fact": "Skill文件组织原则：实践细节应直接合并进官方 skill 的 SKILL.md，而非新建 skill；MEMORY.md 只存核心记忆，保持上下文精简"},
+- {"section"："技术规范偏好", "fact": "Noiz TTS 实践细节不应放进 MEMORY.md，会污染核心上下文"},
+- {"section"："技术规范偏好", "fact": "新创建的独立文件（如 PRACTICE.md）不在 skill 调用链路中，无法保证被读取，不可靠"}
+- {"old_pattern"："飞书用户ID：`ou_6f8cf16048229769c2eca461db8c0f37`", "new_fact": "大哈飞书用户ID：`ou_6f8cf16048229769c2eca461db8c0f37`，大主子（刘婧）飞书用户ID：`ou_d7c0966c0d57f9b65},
+- {"section"："用户身份与偏好", "fact": "用户名刘婧，MacBook Air用户，工作目录涉及/Users/liujing/Documents/news/"},
+- {"section"："用户身份与偏好", "fact": "写作风格偏好：中学生博客风格，活泼真诚有思考深度，面向青少年群体，严谨科学不浮夸"},
+- {"section"："用户身份与偏好", "fact": "新闻简报偏好：偏重科技、国际新闻，特别火爆的新闻也欢迎，语言风格通俗科普适合少年阅读"},
+- {"section"："用户身份与偏好", "fact": "新闻改写偏好：只描述新闻内容，不要有评论"},
+
